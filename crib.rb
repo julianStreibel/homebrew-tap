@@ -5,21 +5,21 @@
 class Crib < Formula
   desc "Smart home CLI for humans and LLM agents"
   homepage "https://github.com/julianStreibel/crib"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julianStreibel/crib/releases/download/v0.3.0/crib_darwin_amd64.tar.gz"
-      sha256 "7606095330bcfe8d748059c761c51f97dcbfb7d28817c9980cb4165cde980cc5"
+      url "https://github.com/julianStreibel/crib/releases/download/v0.4.0/crib_darwin_amd64.tar.gz"
+      sha256 "2870e6cf9d11bbde244008c700600e2e5ee27d4eb414531b11c2801b48e62a8a"
 
       define_method(:install) do
         bin.install "crib"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/julianStreibel/crib/releases/download/v0.3.0/crib_darwin_arm64.tar.gz"
-      sha256 "fd6e345c3ffc29c57e38d508217c42ac666bedd1d8c9ca6e6106305f2d6395d8"
+      url "https://github.com/julianStreibel/crib/releases/download/v0.4.0/crib_darwin_arm64.tar.gz"
+      sha256 "94d1a9f725c31bb79ffdfe65d6ae47828238352517f8cbedc2febfaf08898954"
 
       define_method(:install) do
         bin.install "crib"
@@ -29,15 +29,15 @@ class Crib < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/julianStreibel/crib/releases/download/v0.3.0/crib_linux_amd64.tar.gz"
-      sha256 "814a29566021a85f53169cdc2de59502e12b5cc5bd802342873865a0156cb765"
+      url "https://github.com/julianStreibel/crib/releases/download/v0.4.0/crib_linux_amd64.tar.gz"
+      sha256 "b9515e688e1b7dd2a0e50f24d18a154731aa7aad9dee1267d7dd833789661bd8"
       define_method(:install) do
         bin.install "crib"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/julianStreibel/crib/releases/download/v0.3.0/crib_linux_arm64.tar.gz"
-      sha256 "83ee5637faf77e08c7b40969c84201fef32f8a22874aeeab80f791763f0fadc3"
+      url "https://github.com/julianStreibel/crib/releases/download/v0.4.0/crib_linux_arm64.tar.gz"
+      sha256 "f4a910251bbb417887ab41ea018a671c1ec4bf898b3ab7611eb95c5209d46b33"
       define_method(:install) do
         bin.install "crib"
       end
